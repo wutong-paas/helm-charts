@@ -1,0 +1,19 @@
+
+apiVersion: wutong.io/v1alpha1
+kind: WutongVolume
+metadata:
+  labels:
+    accessModes: rwx
+    belongTo: wutong-operator
+    creator: Wutong
+  name: wutongvolumerwx
+  namespace: wt-system
+spec:
+{{- if .Values.Cluster.RWX.enable  }}
+  storageClassName: {{ .Values.Cluster.RWX.storageClassName }}
+{{ else }}
+  csiPlugin:
+    nfs: {}
+  storageRequest: 1
+{{- end }}
+  imageRepository: swr.cn-southwest-2.myhuaweicloud.com/wutong

@@ -1,0 +1,104 @@
+questions:
+# Wutong Container Images
+- variable: defaultImage
+  default: true
+  description: "Use Wutong default Docker image"
+  label: Use Wutong Default Image
+  type: boolean
+  show_subquestion_if: false
+  group: "Wutong Container Images"
+  subquestions:
+  # ui 
+  - variable: ui.image.repository
+    default: ""
+    description: "Wutong UI Docker image"
+    type: string
+    label: Wutong UI Docker Name
+  - variable: ui.image.tag
+    default: ""
+    description: "Wutong UI Docker tag"
+    type: string
+    label: Wutong UI Image Tag
+  # # console
+  - variable: console.image.repository
+    default: ""
+    description: "Wutong Console Docker image"
+    type: string
+    label: Wutong Console Image Name
+  - variable: console.image.tag
+    default: ""
+    description: "Wutong Console Docker tag"
+    type: string
+    label: Wutong Console Image Tag
+  # # adaptor
+  - variable: adaptor.image.repository
+    default: ""
+    description: "Wutong adaptor Docker image"
+    type: string
+    label: Wutong adaptor Image Name
+  - variable: adaptor.image.tag
+    default: ""
+    description: "Wutong adaptor Docker tag"
+    type: string
+    label: Wutong adaptor Image Tag
+# Set Mysql Redis Password
+- variable: mysql.secret.user
+  description: "Set Mysql User Name"
+  required: true
+  label: Set Mysql User Name
+  type: string
+  group: "wutong-secret"
+- variable: mysql.secret.password
+  description: "Set Mysql User Password"
+  required: true
+  label: Set Mysql User Password
+  type: password
+  group: "wutong-secret"
+- variable: mysql.secret.rootpassword
+  description: "Set Mysql Root Password"
+  required: true
+  label: Set Mysql Root Password
+  type: password
+  group: "wutong-secret"
+- variable: redis.password
+  description: "Set Redis Password"
+  required: true
+  label: Set Redis Password
+  type: password
+  group: "wutong-secret"
+# Volume Setting
+- variable: pvc.storageClassName
+  description: "Set Wutong Component Persistent Volume,Please enter the Storage Name"
+  required: true
+  default: ""
+  label: Set Wutong Component Persistent Volume
+  type: storageclass
+  group: "Persistent Volume"
+- variable: pvc.storageSize
+  description: "Set Wutong Component Persistent Volume Size,Please enter the Storage Size,for example 5Gi"
+  required: true
+  default: "5Gi"
+  label: Set Wutong Component Persistent Volume Size
+  type: string
+  group: "Persistent Volume"
+# ui Service
+- variable: ui.svc.type
+  default: "NodePort"
+  description: "Wutong UI Service type"
+  type: enum
+  options:
+    - "ClusterIP"
+    - "NodePort"
+  required: true
+  label: Wutong UI Service Type
+  show_subquestion_if: "NodePort"
+  group: "Wutong UI Services"
+  subquestions:
+  - variable: ui.svc.nodePort
+    default: "30600"
+    description: "NodePort http port(to set explicitly, choose port between 30000-32767)"
+    type: int
+    min: 30000
+    max: 32767
+    show_if: "ui.svc.type=NodePort"
+    label: NodePort Http Port

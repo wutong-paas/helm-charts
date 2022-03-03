@@ -1,0 +1,14 @@
+{{- if .Values.adaptor.enable }}
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ .Values.adaptor.fullname }}
+  labels:
+    wutong: adaptor
+spec:
+  ports:
+  - port: 8080
+    protocol: TCP
+  selector:
+    wutong: adaptor
+{{- end }}

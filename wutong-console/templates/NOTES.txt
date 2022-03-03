@@ -1,0 +1,6 @@
+Installation successful detection:
+
+watch kubectl get po -n wt-system
+
+Check that the pod is started, and the installation is successful until the  wt-app-ui pod is in the Running state.
+After successful installation, you can access the wutong console through  gatewayIngressIPs:7070 

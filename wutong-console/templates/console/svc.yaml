@@ -1,0 +1,14 @@
+{{- if .Values.console.enable }}
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ .Values.console.fullname }}
+  labels:
+    wutong: console
+spec:
+  ports:
+  - port: 5000
+    protocol: TCP
+  selector:
+    wutong: console
+{{- end }}
