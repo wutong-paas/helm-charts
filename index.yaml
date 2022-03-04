@@ -1,9 +1,20 @@
 apiVersion: v1
 entries:
+  myapp:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2022-03-04T14:58:50.677033069+08:00"
+    description: A Helm chart for Kubernetes
+    digest: 752a0e9e4d68f448fbb2829b452bdfe4c0d5ebe48aca92f630caf157b9aeb8ef
+    name: myapp
+    type: application
+    urls:
+    - https://wutong-paas.github.io/helm-charts/myapp-0.1.0.tgz
+    version: 0.1.0
   wutong-console:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-03-04T14:22:25.175669869+08:00"
+    created: "2022-03-04T14:58:50.679651455+08:00"
     description: A Helm chart for Kubernetes
     digest: 1b871f350d080b833087a25fef60f323264fe94bf8fdfb993e3996d225f7cf7d
     name: wutong-console
@@ -11,4 +22,4 @@ entries:
     urls:
     - https://wutong-paas.github.io/helm-charts/wutong-console-1.0.0-beta.tgz
     version: 1.0.0-beta
-generated: "2022-03-04T14:22:25.172815353+08:00"
+generated: "2022-03-04T14:58:50.676305582+08:00"
