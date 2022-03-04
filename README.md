@@ -31,8 +31,8 @@ Installing helm chart
 
 ```shell
 kubectl create namespace wt-system
-helm install --name my-console wutong/wutong-console \
---version 1.0.0-beta \
+helm install wutong wutong/wutong-console \
+--version 1.0.0-stable \
 --set pvc.storageClassName=my-storageclass \
 --set pvc.storageSize=5Gi \
 --namespace wt-system
@@ -44,8 +44,8 @@ helm install --name my-console wutong/wutong-console \
 Nodeport 30707 is enabled by default, if you want to customize the port, please refer to :point_down:
 
 ```shell
-helm install --name my-console wutong/wutong-console \
---version 1.0.0-beta \
+helm install wutong wutong/wutong-console \
+--version 1.0.0-stable \
 --set ui.svc.nodePort=30600 \
 --namespace wt-system
 ```
