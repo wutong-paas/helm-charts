@@ -18,7 +18,8 @@ You can deploy the Wutong Console in Kubernets using Helm Chart.
 Add `wutong-console` helm charts repo
 
 ```
-helm repo add wutong https://charts.github.com/wutong-pass/charts
+helm repo list
+helm repo add wutong https://wutong-paas.github.io/helm-charts
 helm repo update
 ```
 
@@ -29,10 +30,12 @@ Installing helm chart
 > If not, please refer [Install NFS-Server](https://artifacthub.io/packages/helm/kvaps/nfs-server-provisioner) .
 
 ```shell
+kubectl create namespace wt-system
 helm install --name my-console wutong/wutong-console \
---version 1.0.0 \
+--version 1.0.0-beta \
 --set pvc.storageClassName=my-storageclass \
---set pvc.storageSize=5Gi
+--set pvc.storageSize=5Gi \
+--namespace wt-system
 ```
 
 1. `pvc.storageClassName` Set StorageClassName in the cluster.
@@ -42,8 +45,9 @@ Nodeport 30707 is enabled by default, if you want to customize the port, please 
 
 ```shell
 helm install --name my-console wutong/wutong-console \
---version 1.0.0 \
---set ui.svc.nodePort=30600
+--version 1.0.0-beta \
+--set ui.svc.nodePort=30600 \
+--namespace wt-system
 ```
 
 If you want to customize The parameters,The chart can be customized using The following configurable parameters.
