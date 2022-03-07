@@ -88,3 +88,27 @@ If you want to customize The parameters,The chart can be customized using The fo
 ### License
 
 Wutong follow LGPL-3.0 license，Details see[LICENSE](https://github.com/wutong-paas/wutong/blob/master/LICENSE) and [Licensing](https://github.com/wutong-paas/wutong/blob/master/Licensing.md)
+
+## Wutong Operator Helm Charts
+
+You can deploy the Wutong Operator in Kubernets using Helm Chart.
+
+### Installation
+
+Add `wutong-operator` helm charts repo
+
+```shell
+helm repo list
+helm repo add wutong https://wutong-paas.github.io/helm-charts
+helm repo update
+```
+
+Installing helm chart
+
+```shell
+helm install wutong wutong/wutong-operator \
+--version 1.0.0-stable \
+--set operator.image.name=swr.cn-southwest-2.myhuaweicloud.com/wutong/wutong-operator \
+--set operator.image.tag=v1.0.0-stable \
+--namespace wt-system
+```
