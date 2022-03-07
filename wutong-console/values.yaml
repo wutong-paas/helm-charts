@@ -131,9 +131,6 @@ console:
   # Set the number of copies
   replicasCount: 1
 
-  # Set the Console version
-  RELEASE_DESC: "v5.3.1-release-20210703"
-
   # Specify the Console image
   # No mirroring is provided by default
   image:

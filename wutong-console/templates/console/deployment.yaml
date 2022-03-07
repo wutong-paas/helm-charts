@@ -39,8 +39,6 @@ spec:
               value: "2.0"
             - name: REGION_RED_TIMEOUT
               value: "5.0"
-            - name: RELEASE_DESC
-              value: "{{ .Values.console.RELEASE_DESC }}"
             - name: DB_TYPE
               value: mysql
             - name: MYSQL_HOST
