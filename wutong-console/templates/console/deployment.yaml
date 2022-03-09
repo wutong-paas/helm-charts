@@ -58,16 +58,16 @@ spec:
             - name: ADAPTOR_PORT
               value: "8080"
             - name: PORT
-              value: "5000"
+              value: "80"
           ports:
             - name: tcp
-              containerPort: 5000
+              containerPort: 80
               protocol: TCP
           readinessProbe:
             failureThreshold: 3
             httpGet:
               path: /console/config/info
-              port: 5000
+              port: 80
               scheme: HTTP
             initialDelaySeconds: 3
             periodSeconds: 5

@@ -5,34 +5,34 @@ metadata:
   name: wutong-ui-cm
 data:
   # 类文件键
-  web.conf: |
+  default.conf: |
     server {
-      listen 6000;
+      listen 80;
     
       location / {
-          root   /app/www;
+          root   /usr/share/nginx/html;
           index  index.html index.htm;
       }
 
       location /static/dists/ {
-          root  /app/www;
+          root  /usr/share/nginx/html;
           rewrite ^/static/dists/(.*)$ /$1 break;
       }
       
       location /console {
-          proxy_pass http://{{ .Values.console.fullname }}:5000;
+          proxy_pass http://{{ .Values.console.fullname }}:80;
       }
 
       location /static/www {
-          proxy_pass http://{{ .Values.console.fullname }}:5000;
+          proxy_pass http://{{ .Values.console.fullname }}:80;
       }
 
       location /data {
-          proxy_pass http://{{ .Values.console.fullname }}:5000;
+          proxy_pass http://{{ .Values.console.fullname }}:80;
       }
 
       location /openapi {
-          proxy_pass http://{{ .Values.console.fullname }}:5000;
+          proxy_pass http://{{ .Values.console.fullname }}:80;
       }
     }
 {{- end }}

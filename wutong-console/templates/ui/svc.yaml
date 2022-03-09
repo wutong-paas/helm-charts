@@ -10,8 +10,8 @@ spec:
   selector:
     wutong: ui
   ports:
-    - port: 6000
-      targetPort: 6000
+    - port: 80
+      targetPort: 80
       {{ if eq .Values.ui.svc.type "NodePort" }}
       nodePort: {{ .Values.ui.svc.nodePort }}
       {{ end }}
