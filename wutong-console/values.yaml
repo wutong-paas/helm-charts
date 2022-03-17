@@ -83,7 +83,7 @@ mysql:
 
 # Separate versions of the front and back ends of Wutong-Console
 # Cluster installation controller configuration
-# Deprecated, please refer to the official documentation to install the detached console from the Rainstore https://www.wutong.com/docs/user-operations/ha-deploy/console-recover/
+# Deprecated, please refer to the official documentation to install the detached console from the Wutong-Paas Store https://www.wutong.com/docs/user-operations/ha-deploy/console-recover/
 adaptor:
 
   # Specify the full name of adaptor
@@ -119,7 +119,7 @@ adaptor:
 
 # Separate versions of the front and back ends of Wutong-Console
 # Console back-end services
-# Deprecated, please refer to the official documentation to install the detached console from the Rainstore https://www.wutong.com/docs/user-operations/ha-deploy/console-recover/
+# Deprecated, please refer to the official documentation to install the detached console from the Wutong-Paas Store https://www.wutong.com/docs/user-operations/ha-deploy/console-recover/
 console:
 
   # Specify the full name of Console
@@ -158,7 +158,7 @@ console:
 
 # Separate versions of the front and back ends of Wutong-Console
 # Console front-end services
-# Deprecated, please refer to the official documentation to install the detached console from the Rainstore https://www.wutong.com/docs/user-operations/ha-deploy/console-recover/
+# Deprecated, please refer to the official documentation to install the detached console from the Wutong-Paas Store https://www.wutong.com/docs/user-operations/ha-deploy/console-recover/
 ui:
 
   # Specify the full name of UI

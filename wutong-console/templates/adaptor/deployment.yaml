@@ -42,7 +42,7 @@ spec:
             - name: HELM_CACHE
               value: "/app/helmcache/cache"
             - name: HELM_PATH
-              value: "/app/helm"
+              value: "/usr/local/bin/helm"
             - name: HELM_REPO_FILE
               value: "/app/helmcache/repo/repository.yaml"
             - name: LISTEN
