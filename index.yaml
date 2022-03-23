@@ -3,9 +3,9 @@ entries:
   wutong-console:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-03-17T16:59:59.052541435+08:00"
+    created: "2022-03-23T17:00:53.984220654+08:00"
     description: A Helm chart for Kubernetes
-    digest: abec705a1bd7ad85dd8995351df1b80211626c43c76865e1dbea74d1475ef431
+    digest: 6200e3b6a3a0fa39a994a58aad490bc34e565abb27024b15d86ef37c1adc54b4
     name: wutong-console
     type: application
     urls:
@@ -13,7 +13,7 @@ entries:
     version: 1.0.2
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-03-17T16:59:59.048494138+08:00"
+    created: "2022-03-23T17:00:53.980833348+08:00"
     description: A Helm chart for Kubernetes
     digest: 793e3296eafef90b3cce39541fec39a0089dea306bf1e294dd7bf6ff2ac1c47f
     name: wutong-console
@@ -23,7 +23,7 @@ entries:
     version: 1.0.1
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-03-17T16:59:59.047150296+08:00"
+    created: "2022-03-23T17:00:53.9763575+08:00"
     description: A Helm chart for Kubernetes
     digest: fe40d7f9ef6e49a86972b3a2b9ad87548f76de812ffa0afdb3b4eb735f717baf
     name: wutong-console
@@ -34,7 +34,7 @@ entries:
   wutong-operator:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-03-17T16:59:59.065158174+08:00"
+    created: "2022-03-23T17:00:54.003743273+08:00"
     description: A Helm chart for Kubernetes
     digest: 3cbb0a102d92c5e8bf5b69b35ea7ceb2d52a75cecc34040daa13dad33eff1d72
     name: wutong-operator
@@ -44,7 +44,7 @@ entries:
     version: 1.0.1
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-03-17T16:59:59.055523264+08:00"
+    created: "2022-03-23T17:00:53.986910509+08:00"
     description: A Helm chart for Kubernetes
     digest: 63306b2562d76405d1619f64c007d9cc9a03fcda4e806fba55edd369e740d118
     name: wutong-operator
@@ -52,4 +52,4 @@ entries:
     urls:
     - https://wutong-paas.github.io/helm-charts/wutong-operator-1.0.0.tgz
     version: 1.0.0
-generated: "2022-03-17T16:59:59.045484686+08:00"
+generated: "2022-03-23T17:00:53.965193875+08:00"

@@ -18,21 +18,26 @@ data:
           root  /usr/share/nginx/html;
           rewrite ^/static/dists/(.*)$ /$1 break;
       }
+
+      location /console/proxy {
+          proxy_pass http://{{ .Values.adaptor.fullname }}:8080;
+          rewrite ^/console/proxy/(.*)$ /$1 break;
+      }      
       
       location /console {
-          proxy_pass http://{{ .Values.console.fullname }}:80;
+          proxy_pass http://{{ .Values.console.fullname }}:8888;
       }
 
       location /static/www {
-          proxy_pass http://{{ .Values.console.fullname }}:80;
+          proxy_pass http://{{ .Values.console.fullname }}:8888;
       }
 
       location /data {
-          proxy_pass http://{{ .Values.console.fullname }}:80;
+          proxy_pass http://{{ .Values.console.fullname }}:8888;
       }
 
       location /openapi {
-          proxy_pass http://{{ .Values.console.fullname }}:80;
+          proxy_pass http://{{ .Values.console.fullname }}:8888;
       }
     }
 {{- end }}
