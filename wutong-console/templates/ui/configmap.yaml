@@ -22,8 +22,8 @@ data:
       location /console/proxy {
           proxy_pass http://{{ .Values.adaptor.fullname }}:8080;
           rewrite ^/console/proxy/(.*)$ /$1 break;
-      }      
-      
+      }
+
       location /console {
           proxy_pass http://{{ .Values.console.fullname }}:8888;
       }
