@@ -32,7 +32,7 @@ Installing helm chart
 ```shell
 kubectl create namespace wt-system
 helm install wutong wutong/wutong-console \
---version 1.0.0-stable \
+--version 1.0.0 \
 --set pvc.storageClassName=my-storageclass \
 --set pvc.storageSize=5Gi \
 --namespace wt-system
