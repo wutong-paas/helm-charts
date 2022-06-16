@@ -107,7 +107,7 @@ Installing helm chart
 
 ```shell
 helm install wutong wutong/wutong-operator \
---version 1.0.0-stable \
+--version 1.0.0 \
 --set operator.image.name=swr.cn-southwest-2.myhuaweicloud.com/wutong/wutong-operator \
 --set operator.image.tag=v1.0.0-stable \
 --namespace wt-system
