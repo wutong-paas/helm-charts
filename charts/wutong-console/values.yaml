@@ -21,8 +21,8 @@ redis:
   # Specify the Redis image
   image:
     repository: redis
-    pullPolicy: IfNotPresent
-    tag: 4.0.12
+    pullPolicy: Always
+    tag: 5.0
 
   # Specify the Redis Password 
   password: "123456"
