@@ -78,6 +78,9 @@ spec:
             name: console-data
           - mountPath: /app/logs
             name: console-logs
+          - mountPath: /app/service/plugin/default_config.json
+            subPath: default_config.json
+            name: console-conf            
           resources:
             {{- toYaml .Values.console.resources | nindent 12 }}
       volumes:
@@ -87,6 +90,9 @@ spec:
       - name: console-logs
         persistentVolumeClaim:
           claimName: wutong-console-pvc-logs
+      - name: console-conf
+        configMap:
+          name: wutong-console-cm
       {{- with .Values.console.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
