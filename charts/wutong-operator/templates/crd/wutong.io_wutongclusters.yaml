@@ -19,7 +19,7 @@ spec:
   - name: v1alpha1
     schema:
       openAPIV3Schema:
-        description: WutongCluster is the Schema for the wutongclusters API
+        description: WutongCluster is the Schema for the WutongClusters API
         properties:
           apiVersion:
             description: 'APIVersion defines the versioned schema of this representation
@@ -36,6 +36,8 @@ spec:
           spec:
             description: WutongClusterSpec defines the desired state of WutongCluster
             properties:
+              arch:
+                type: string
               cacheMode:
                 type: string
               ciVersion:
@@ -359,7 +361,7 @@ spec:
               conditions:
                 items:
                   description: WutongClusterCondition contains condition information
-                    for wutongcluster.
+                    for WutongCluster.
                   properties:
                     lastHeartbeatTime:
                       description: Last time we got an update on a given condition.
