@@ -35,6 +35,7 @@ helm install wutong wutong/wutong-console \
 --version 1.0.0 \
 --set pvc.storageClassName=my-storageclass \
 --set pvc.storageSize=5Gi \
+--set ui.domain=my-domain.com \
 --namespace wt-system
 ```
 
