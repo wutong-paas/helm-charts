@@ -3,6 +3,16 @@ entries:
   wutong-console:
   - apiVersion: v2
     appVersion: 1.16.0
+    created: "2022-11-28T01:15:43.452884701Z"
+    description: A Helm chart for Kubernetes
+    digest: ac90dbd76f7e63afc1669150004b54fda2b7f3c2cd78779b2ff68d1d4ed4e86f
+    name: wutong-console
+    type: application
+    urls:
+    - https://github.com/wutong-paas/helm-charts/releases/download/wutong-console-1.0.4/wutong-console-1.0.4.tgz
+    version: 1.0.4
+  - apiVersion: v2
+    appVersion: 1.16.0
     created: "2022-07-13T06:47:20.678994314Z"
     description: A Helm chart for Kubernetes
     digest: f352cd606b6fd8bd1f642b5b443f59f5dc8fd2b196e59d765f92337442e42fa4
@@ -44,6 +54,16 @@ entries:
   wutong-operator:
   - apiVersion: v2
     appVersion: 1.16.0
+    created: "2022-11-28T01:15:43.589851423Z"
+    description: A Helm chart for Kubernetes
+    digest: 07edd37d4550b4f048be723dbde424d8b4a7f7ead866da746197ae2c15209295
+    name: wutong-operator
+    type: application
+    urls:
+    - https://github.com/wutong-paas/helm-charts/releases/download/wutong-operator-1.0.4/wutong-operator-1.0.4.tgz
+    version: 1.0.4
+  - apiVersion: v2
+    appVersion: 1.16.0
     created: "2022-11-17T09:53:21.444414176Z"
     description: A Helm chart for Kubernetes
     digest: a8e9986755f564f5da18d78c45c599bdc0f040648ecefbc66c67a91987c5ab76
@@ -82,4 +102,4 @@ entries:
     urls:
     - https://github.com/wutong-paas/helm-charts/releases/download/wutong-operator-1.0.0/wutong-operator-1.0.0.tgz
     version: 1.0.0
-generated: "2022-11-17T09:53:21.444473076Z"
+generated: "2022-11-28T01:15:43.589903223Z"
