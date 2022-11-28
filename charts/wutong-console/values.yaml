@@ -176,6 +176,8 @@ ui:
     repository: "swr.cn-southwest-2.myhuaweicloud.com/wutong/wutong-ui"
     pullPolicy: IfNotPresent
     tag: "v1.0.0-stable"
+
+  domain: console.wutongpaas.com
   
   # The default service protocol is NodePort, which opens port 30606
   svc:
