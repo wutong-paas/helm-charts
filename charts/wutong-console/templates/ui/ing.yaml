@@ -1,10 +1,10 @@
-{{- if .Values.console.enable }}
+{{- if .Values.ui.enable }}
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: {{ .Values.ui.fullname }}
   labels:
-    wutong: console
+    wutong: ui
 spec:
   rules:
   - host: {{ .Values.ui.domain }}
