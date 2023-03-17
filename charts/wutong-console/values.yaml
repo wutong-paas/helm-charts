@@ -20,7 +20,7 @@ redis:
   # Specify the Redis image
   image:
     repository: redis
-    pullPolicy: Always
+    pullPolicy: IfNotPresent
     tag: 5.0
 
   # Specify the Redis Password
@@ -170,7 +170,10 @@ ui:
   image:
     repository: "swr.cn-southwest-2.myhuaweicloud.com/wutong/wutong-ui"
     pullPolicy: IfNotPresent
+
     tag: "v1.1.0-stable"
+
+  domain: console.wutongpaas.com
 
   # The default service protocol is NodePort, which opens port 30606
   svc:

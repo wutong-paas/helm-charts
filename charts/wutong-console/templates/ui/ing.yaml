@@ -1,0 +1,20 @@
+{{- if .Values.ui.enable }}
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: {{ .Values.ui.fullname }}
+  labels:
+    wutong: ui
+spec:
+  rules:
+  - host: {{ .Values.ui.domain }}
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: {{ .Values.ui.fullname }}
+            port:
+              number: 80
+{{- end }}
