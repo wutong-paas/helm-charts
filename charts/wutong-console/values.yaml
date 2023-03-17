@@ -5,7 +5,6 @@
 # Refer to README for configuration details
 # Please refer to the official documentation for installation https://www.wutong.com/docs/install/other-methods/install-from-rancher/
 
-
 # Specify up the dynamic storage used by the Wutong component
 # If not, please refer https://artifacthub.io/packages/helm/kvaps/nfs-server-provisioner
 pvc:
@@ -24,12 +23,12 @@ redis:
     pullPolicy: Always
     tag: 5.0
 
-  # Specify the Redis Password 
+  # Specify the Redis Password
   password: "123456"
   podAnnotations: {}
 
   # Set the Redis Labels
-  selectorLabels: 
+  selectorLabels:
     wutong: redis
 
   # Set POD resource limits
@@ -46,7 +45,6 @@ redis:
 
 # Mysql configuration,Refer to README for configuration details
 mysql:
-
   # Specify the full name of Mysql
   fullname: wutong-mysql
 
@@ -66,7 +64,7 @@ mysql:
   podAnnotations: {}
 
   # Set the MySQL Labels
-  selectorLabels: 
+  selectorLabels:
     wutong: mysql
 
   # Set POD resource limits
@@ -85,7 +83,6 @@ mysql:
 # Cluster installation controller configuration
 # Deprecated, please refer to the official documentation to install the detached console from the Wutong-Paas Store https://www.wutong.com/docs/user-operations/ha-deploy/console-recover/
 adaptor:
-
   # Specify the full name of adaptor
   fullname: wutong-adaptor
 
@@ -97,12 +94,12 @@ adaptor:
   image:
     repository: "swr.cn-southwest-2.myhuaweicloud.com/wutong/wutong-adaptor"
     pullPolicy: IfNotPresent
-    tag: "v1.0.0-stable"
+    tag: "v1.1.0-stable"
 
   podAnnotations: {}
 
   # Set the Adaptor Labels
-  selectorLabels: 
+  selectorLabels:
     wutong: adaptor
 
   # Set POD resource limits
@@ -121,7 +118,6 @@ adaptor:
 # Console back-end services
 # Deprecated, please refer to the official documentation to install the detached console from the Wutong-Paas Store https://www.wutong.com/docs/user-operations/ha-deploy/console-recover/
 console:
-
   # Specify the full name of Console
   fullname: wutong-console
 
@@ -136,12 +132,12 @@ console:
   image:
     repository: "swr.cn-southwest-2.myhuaweicloud.com/wutong/wutong-console"
     pullPolicy: IfNotPresent
-    tag: "v1.0.0-stable"
+    tag: "v1.1.0-stable"
 
   podAnnotations: {}
 
   # Set the Console Labels
-  selectorLabels: 
+  selectorLabels:
     wutong: console
 
   # Set POD resource limits
@@ -160,7 +156,6 @@ console:
 # Console front-end services
 # Deprecated, please refer to the official documentation to install the detached console from the Wutong-Paas Store https://www.wutong.com/docs/user-operations/ha-deploy/console-recover/
 ui:
-
   # Specify the full name of UI
   fullname: wutong-ui
 
@@ -175,8 +170,8 @@ ui:
   image:
     repository: "swr.cn-southwest-2.myhuaweicloud.com/wutong/wutong-ui"
     pullPolicy: IfNotPresent
-    tag: "v1.0.0-stable"
-  
+    tag: "v1.1.0-stable"
+
   # The default service protocol is NodePort, which opens port 30606
   svc:
     type: NodePort
@@ -185,7 +180,7 @@ ui:
   podAnnotations: {}
 
   # Set the UI Labels
-  selectorLabels: 
+  selectorLabels:
     wutong: ui
 
   # Set POD resource limits

@@ -52,30 +52,30 @@ helm install wutong wutong/wutong-console \
 
 If you want to customize The parameters,The chart can be customized using The following configurable parameters.
 
-| Parameter                                                    | Description                                                  | Default                                             |
-| :----------------------------------------------------------- | :----------------------------------------------------------- | :-------------------------------------------------- |
-| `pvc.storageClassName`                                       | The StorageClass required for the Wutong component         | ""                                                  |
-| `pvc.storageSize`                                            | To apply for PV Size                                         | 5Gi                                                 |
-| `redis.fullname`                                             | Redis full name                                              | wutong-redis                                      |
-| `redis.image.repository`                                     | Redis image repository                                       | redis                                               |
-| `redis.image.pullPolicy`                                     | Redis image Pull strategy                                    | IfNotPresent                                        |
-| `redis.image.tag`                                            | Redis image tag                                              | 4.0.12                                              |
-| `redis.password`                                             | Redis Password                                               | 123456                                              |
-| `redis.podAnnotations`                                       | Annotation to be added to Redis pods                         | {}                                                  |
-| `redis.selectorLabels`                                       | Set the Redis Labels                                         | wutong: redis                                     |
-| `redis.resources`                                            | Redis resource requests and limits                           | {}                                                  |
-| `redis.nodeSelector`                                         | Node labels for pod assignment                               | {}                                                  |
-| `redis.affinity`                                             | Defines affinities and anti-affinities for pods as defined in: https://kubernetes.io/docs/concepts/configuration/assign-pod-node/#affinity-and-anti-affinity preferences | {}                                                  |
-| `mysql.fullname`                                             | Mysql full name                                              | wutong-mysql                                      |
-| `mysql.image.repository`                                     | Mysql image repository                                       | mysql                                               |
-| `mysql.image.pullPolicy`                                     | Mysql image Pull strategy                                    | IfNotPresent                                        |
-| `mysql.image.tag`                                            | Mysql image tag                                              | 5.7.23                                              |
-| `mysql.secret.user` `mysql.secret.password` `mysql.secret.rootpassword` `mysql.secret.database` | Specify  MySQL account password and database                 |                                                     |
-| `mysql.podAnnotations`                                       | Annotation to be added to Mysql pods                         | {}                                                  |
-| `mysql.selectorLabels`                                       | Set the Mysql Labels                                         | wutong: mysql                                     |
-| `mysql.resources`                                            | Mysql resource requests and limits                           | {}                                                  |
-| `mysql.nodeSelector`                                         | Node labels for pod assignment                               | {}                                                  |
-| `mysql.affinity`                                             | Defines affinities and anti-affinities for pods as defined in: https://kubernetes.io/docs/concepts/configuration/assign-pod-node/#affinity-and-anti-affinity preferences | {}                                                  |
+| Parameter                                                                                       | Description                                                                                                                                                              | Default       |
+| :---------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------ |
+| `pvc.storageClassName`                                                                          | The StorageClass required for the Wutong component                                                                                                                       | ""            |
+| `pvc.storageSize`                                                                               | To apply for PV Size                                                                                                                                                     | 5Gi           |
+| `redis.fullname`                                                                                | Redis full name                                                                                                                                                          | wutong-redis  |
+| `redis.image.repository`                                                                        | Redis image repository                                                                                                                                                   | redis         |
+| `redis.image.pullPolicy`                                                                        | Redis image Pull strategy                                                                                                                                                | IfNotPresent  |
+| `redis.image.tag`                                                                               | Redis image tag                                                                                                                                                          | 4.0.12        |
+| `redis.password`                                                                                | Redis Password                                                                                                                                                           | 123456        |
+| `redis.podAnnotations`                                                                          | Annotation to be added to Redis pods                                                                                                                                     | {}            |
+| `redis.selectorLabels`                                                                          | Set the Redis Labels                                                                                                                                                     | wutong: redis |
+| `redis.resources`                                                                               | Redis resource requests and limits                                                                                                                                       | {}            |
+| `redis.nodeSelector`                                                                            | Node labels for pod assignment                                                                                                                                           | {}            |
+| `redis.affinity`                                                                                | Defines affinities and anti-affinities for pods as defined in: https://kubernetes.io/docs/concepts/configuration/assign-pod-node/#affinity-and-anti-affinity preferences | {}            |
+| `mysql.fullname`                                                                                | Mysql full name                                                                                                                                                          | wutong-mysql  |
+| `mysql.image.repository`                                                                        | Mysql image repository                                                                                                                                                   | mysql         |
+| `mysql.image.pullPolicy`                                                                        | Mysql image Pull strategy                                                                                                                                                | IfNotPresent  |
+| `mysql.image.tag`                                                                               | Mysql image tag                                                                                                                                                          | 5.7.23        |
+| `mysql.secret.user` `mysql.secret.password` `mysql.secret.rootpassword` `mysql.secret.database` | Specify  MySQL account password and database                                                                                                                             |               |
+| `mysql.podAnnotations`                                                                          | Annotation to be added to Mysql pods                                                                                                                                     | {}            |
+| `mysql.selectorLabels`                                                                          | Set the Mysql Labels                                                                                                                                                     | wutong: mysql |
+| `mysql.resources`                                                                               | Mysql resource requests and limits                                                                                                                                       | {}            |
+| `mysql.nodeSelector`                                                                            | Node labels for pod assignment                                                                                                                                           | {}            |
+| `mysql.affinity`                                                                                | Defines affinities and anti-affinities for pods as defined in: https://kubernetes.io/docs/concepts/configuration/assign-pod-node/#affinity-and-anti-affinity preferences | {}            |
 
 ### Related repositorys
 
@@ -107,8 +107,8 @@ Installing helm chart
 
 ```shell
 helm install wutong wutong/wutong-operator \
---version 1.0.0 \
+--version 1.1.0 \
 --set operator.image.name=swr.cn-southwest-2.myhuaweicloud.com/wutong/wutong-operator \
---set operator.image.tag=v1.0.0-stable \
+--set operator.image.tag=v1.1.0-stable \
 --namespace wt-system
 ```
