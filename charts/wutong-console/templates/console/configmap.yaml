@@ -886,6 +886,16 @@ data:
                 ]
             }
             ]
-        }
+        },
+        "java_agent_plugin": {
+            "plugin_alias": "wutong-obs-java-agent",
+            "desc": "梧桐可观测平台Java探针插件",
+            "category": "init-plugin",
+            "code_repo": "",
+            "build_version": "1.0.0",
+            "build_source": "image",
+            "image": "swr.cn-southwest-2.myhuaweicloud.com/wutong/java-agent:v1.0.0-arm",
+            "config_group": []
+        } 
     }
 {{- end }}
