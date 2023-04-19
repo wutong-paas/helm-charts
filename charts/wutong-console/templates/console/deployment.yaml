@@ -5,6 +5,7 @@ metadata:
   name: {{ .Values.console.fullname }}
   labels:
     wutong: console
+    creator: Wutong
 spec:
   replicas: {{ .Values.console.replicasCount }}
   selector:

@@ -5,6 +5,7 @@ metadata:
   name: {{ .Values.ui.fullname }}
   labels:
     wutong: ui
+    creator: Wutong
 spec:
   type: {{ .Values.ui.svc.type }}
   selector:

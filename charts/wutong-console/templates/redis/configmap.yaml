@@ -4,6 +4,7 @@ metadata:
   name: {{ .Values.redis.fullname }}-cm
   labels:
     wutong: redis
+    creator: Wutong
 data:
   redis.conf: |
     requirepass {{ .Values.redis.password }}

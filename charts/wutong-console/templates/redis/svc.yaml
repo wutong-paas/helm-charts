@@ -4,6 +4,7 @@ metadata:
   name: {{ .Values.redis.fullname }}
   labels:
     wutong: redis
+    creator: Wutong
 spec:
   ports:
   - port: 6379

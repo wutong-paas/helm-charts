@@ -5,6 +5,7 @@ metadata:
   name: {{ .Values.adaptor.fullname }}
   labels:
     wutong: adaptor
+    creator: Wutong
 spec:
   replicas: 1
   selector:

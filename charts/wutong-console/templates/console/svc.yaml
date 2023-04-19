@@ -5,6 +5,7 @@ metadata:
   name: {{ .Values.console.fullname }}
   labels:
     wutong: console
+    creator: Wutong
 spec:
   ports:
   - port: 8888

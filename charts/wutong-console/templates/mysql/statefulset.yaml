@@ -4,6 +4,7 @@ metadata:
   name: {{ .Values.mysql.fullname }}
   labels:
     wutong: mysql
+    creator: Wutong
 spec:
   serviceName: {{ .Values.mysql.fullname }}
   replicas: 1

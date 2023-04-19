@@ -4,6 +4,7 @@ metadata:
   name: {{ .Values.mysql.fullname }}
   labels:
     wutong: mysql
+    creator: Wutong
 spec:
   ports:
   - port: 3306

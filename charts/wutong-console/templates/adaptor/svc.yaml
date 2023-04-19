@@ -5,6 +5,7 @@ metadata:
   name: {{ .Values.adaptor.fullname }}
   labels:
     wutong: adaptor
+    creator: Wutong
 spec:
   ports:
   - port: 8080
