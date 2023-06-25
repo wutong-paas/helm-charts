@@ -1,4 +1,5 @@
 # helm-charts
+
 Helm Charts for Wutong PAAS apps.
 
 ## Wutong Console Helm Charts
@@ -17,7 +18,7 @@ You can deploy the Wutong Console in Kubernets using Helm Chart.
 
 Add `wutong-console` helm charts repo
 
-```
+```shell
 helm repo list
 helm repo add wutong https://wutong-paas.github.io/helm-charts
 helm repo update
@@ -80,11 +81,11 @@ If you want to customize The parameters,The chart can be customized using The fo
 
 ### Related repositorys
 
-- [Wutong-Console](https://github.com/wutong-paas/wutong-console)
-- [Wutong-Console-UI](https://github.com/wutong-paas/wutong-ui)
-- [Wutong-Operator](https://github.com/wutong-paas/wutong-operator)
-- [Wutong-Builder](https://github.com/wutong-paas/builder)
-- [Wutong-Docs](https://github.com/wutong-paas/wutong-docs)
+* [Wutong-Console](https://github.com/wutong-paas/wutong-console)
+* [Wutong-Console-UI](https://github.com/wutong-paas/wutong-ui)
+* [Wutong-Operator](https://github.com/wutong-paas/wutong-operator)
+* [Wutong-Builder](https://github.com/wutong-paas/builder)
+* [Wutong-Docs](https://github.com/wutong-paas/wutong-docs)
 
 ### License
 
@@ -108,8 +109,8 @@ Installing helm chart
 
 ```shell
 helm install wutong wutong/wutong-operator \
---version 1.1.0 \
+--version 1.2.0 \
 --set operator.image.name=swr.cn-southwest-2.myhuaweicloud.com/wutong/wutong-operator \
---set operator.image.tag=v1.1.0-stable \
+--set operator.image.tag=v1.2.0-stable \
 --namespace wt-system
 ```
