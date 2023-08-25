@@ -24,6 +24,10 @@ spec:
           hostPath:
             path: /var/run
             type: Directory
+        - name: containerd-config
+          hostPath:
+            path: /etc/containerd
+            type: Directory            
       containers:
         - command:
             - /manager
@@ -54,5 +58,7 @@ spec:
           volumeMounts:
             - mountPath: /var/run
               name: dockersock
+            - mountPath: /etc/containerd
+              name: containerd-config
       terminationGracePeriodSeconds: 10
 {{- end }}
