@@ -20,9 +20,9 @@ spec:
     spec:
       serviceAccountName: {{ .Values.serviceAccount.name }}
       volumes:
-        - name: dockersock
+        - name: run
           hostPath:
-            path: /var/run
+            path: /run
             type: Directory
         - name: containerd-config
           hostPath:
@@ -56,8 +56,8 @@ spec:
               cpu: 100m
               memory: 64Mi
           volumeMounts:
-            - mountPath: /var/run
-              name: dockersock
+            - mountPath: /run
+              name: run
             - mountPath: /etc/containerd
               name: containerd-config
       terminationGracePeriodSeconds: 10
