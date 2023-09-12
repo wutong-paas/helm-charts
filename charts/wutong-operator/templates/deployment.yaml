@@ -27,7 +27,7 @@ spec:
         - name: containerd-config
           hostPath:
             path: /etc/containerd
-            type: Directory            
+            type: DirectoryOrCreate            
       containers:
         - command:
             - /manager
