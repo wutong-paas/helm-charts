@@ -134,6 +134,16 @@ entries:
   wutong-operator:
   - apiVersion: v2
     appVersion: 1.16.0
+    created: "2023-09-12T02:56:30.382166349Z"
+    description: A Helm chart for Kubernetes
+    digest: c93e56d8d25cb8ad01f2a1407bf0a030fb28288fe84c53c16ee953639f849d59
+    name: wutong-operator
+    type: application
+    urls:
+    - https://github.com/wutong-paas/helm-charts/releases/download/wutong-operator-1.5.3/wutong-operator-1.5.3.tgz
+    version: 1.5.3
+  - apiVersion: v2
+    appVersion: 1.16.0
     created: "2023-09-12T02:46:47.260583486Z"
     description: A Helm chart for Kubernetes
     digest: 4f6c7d2bd2fbd6f1b9ff227ffe154a38567611dc0f0ed9a2cf669f45d974c5f9
@@ -262,4 +272,4 @@ entries:
     urls:
     - https://github.com/wutong-paas/helm-charts/releases/download/wutong-operator-1.0.0/wutong-operator-1.0.0.tgz
     version: 1.0.0
-generated: "2023-09-12T02:46:47.260890789Z"
+generated: "2023-09-12T02:56:30.382325149Z"
