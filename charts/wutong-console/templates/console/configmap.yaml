@@ -12,9 +12,9 @@ data:
             "desc": "实现智能路由、A/B测试、灰度发布、端口复用等微服务治理功能",
             "category": "net-plugin:down",
             "code_repo": "",
-            "build_version": "1.7.0",
+            "build_version": "1.8.0",
             "build_source": "image",
-            "image": "swr.cn-southwest-2.myhuaweicloud.com/wutong/wt-mesh-data-panel:v1.7.0",
+            "image": "swr.cn-southwest-2.myhuaweicloud.com/wutong/wt-mesh-data-panel:v1.8.0",
             "config_group": [
             {
                 "service_meta_type": "downstream_port",
@@ -201,9 +201,9 @@ data:
             "desc": "该插件支持服务的出站和入站网络治理，包括服务动态路由、限流、熔断等功能",
             "category": "net-plugin:in-and-out",
             "code_repo": "",
-            "build_version": "1.7.0",
+            "build_version": "1.8.0",
             "build_source": "image",
-            "image": "swr.cn-southwest-2.myhuaweicloud.com/wutong/wt-mesh-data-panel:v1.7.0",
+            "image": "swr.cn-southwest-2.myhuaweicloud.com/wutong/wt-mesh-data-panel:v1.8.0",
             "config_group": [
             {
                 "service_meta_type": "upstream_port",
@@ -622,7 +622,7 @@ data:
             "desc": "文件管理插件，挂载组件目录并与组件一同运行，并对外提供文件上传下载等服务。",
             "category": "general-plugin",
             "code_repo": "",
-            "build_version": "1.7.0",
+            "build_version": "1.8.0",
             "build_source": "image",
             "image": "swr.cn-southwest-2.myhuaweicloud.com/wutong/filebrowser:stable",
             "config_group": [
@@ -667,7 +667,7 @@ data:
             "desc": "MySQL Manager，以 Web UI 页面形式帮助连接、操作 MySQL 中间件。",
             "category": "dbgate-plugin",
             "code_repo": "",
-            "build_version": "1.7.0",
+            "build_version": "1.8.0",
             "build_source": "image",
             "image": "swr.cn-southwest-2.myhuaweicloud.com/wutong/dbgate:stable",
             "config_group": [
@@ -784,7 +784,7 @@ data:
             "desc": "Redis Manager，以 Web UI 页面形式帮助连接、操作 Redis 中间件。",
             "category": "dbgate-plugin",
             "code_repo": "",
-            "build_version": "1.7.0",
+            "build_version": "1.8.0",
             "build_source": "image",
             "image": "swr.cn-southwest-2.myhuaweicloud.com/wutong/dbgate:stable",
             "config_group": [

@@ -33,7 +33,7 @@ Installing helm chart
 ```shell
 kubectl create namespace wt-system
 helm install wutong wutong/wutong-console \
---version 1.7.0 \
+--version 1.8.0 \
 --set pvc.storageClassName=my-storageclass \
 --set pvc.storageSize=5Gi \
 --set ui.domain=my-domain.com \
@@ -47,7 +47,7 @@ Nodeport 30707 is enabled by default, if you want to customize the port, please 
 
 ```shell
 helm install wutong wutong/wutong-console \
---version 1.7.0 \
+--version 1.8.0 \
 --set ui.svc.nodePort=30600 \
 --namespace wt-system
 ```
@@ -109,8 +109,8 @@ Installing helm chart
 
 ```shell
 helm install wutong wutong/wutong-operator \
---version 1.7.0 \
+--version 1.8.0 \
 --set operator.image.name=swr.cn-southwest-2.myhuaweicloud.com/wutong/wutong-operator \
---set operator.image.tag=v1.7.0 \
+--set operator.image.tag=v1.8.0 \
 --namespace wt-system
 ```
