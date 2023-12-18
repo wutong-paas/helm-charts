@@ -12,7 +12,7 @@ You can deploy the Wutong Console in Kubernets using Helm Chart.
 
 * StorageClass is required within the cluster
 
-  > ref: https://artifacthub.io/packages/helm/kvaps/nfs-server-provisioner
+  > ref: <https://artifacthub.io/packages/helm/kvaps/nfs-server-provisioner>
 
 ### Installation
 
@@ -33,7 +33,7 @@ Installing helm chart
 ```shell
 kubectl create namespace wt-system
 helm install wutong wutong/wutong-console \
---version 1.8.0 \
+--version 1.9.0 \
 --set pvc.storageClassName=my-storageclass \
 --set pvc.storageSize=5Gi \
 --set ui.domain=my-domain.com \
@@ -47,7 +47,7 @@ Nodeport 30707 is enabled by default, if you want to customize the port, please 
 
 ```shell
 helm install wutong wutong/wutong-console \
---version 1.8.0 \
+--version 1.9.0 \
 --set ui.svc.nodePort=30600 \
 --namespace wt-system
 ```
@@ -67,7 +67,7 @@ If you want to customize The parameters,The chart can be customized using The fo
 | `redis.selectorLabels`                                                                          | Set the Redis Labels                                                                                                                                                     | wutong: redis |
 | `redis.resources`                                                                               | Redis resource requests and limits                                                                                                                                       | {}            |
 | `redis.nodeSelector`                                                                            | Node labels for pod assignment                                                                                                                                           | {}            |
-| `redis.affinity`                                                                                | Defines affinities and anti-affinities for pods as defined in: https://kubernetes.io/docs/concepts/configuration/assign-pod-node/#affinity-and-anti-affinity preferences | {}            |
+| `redis.affinity`                                                                                | Defines affinities and anti-affinities for pods as defined in: <https://kubernetes.io/docs/concepts/configuration/assign-pod-node/#affinity-and-anti-affinity> preferences | {}            |
 | `mysql.fullname`                                                                                | Mysql full name                                                                                                                                                          | wutong-mysql  |
 | `mysql.image.repository`                                                                        | Mysql image repository                                                                                                                                                   | mysql         |
 | `mysql.image.pullPolicy`                                                                        | Mysql image Pull strategy                                                                                                                                                | IfNotPresent  |
@@ -77,7 +77,7 @@ If you want to customize The parameters,The chart can be customized using The fo
 | `mysql.selectorLabels`                                                                          | Set the Mysql Labels                                                                                                                                                     | wutong: mysql |
 | `mysql.resources`                                                                               | Mysql resource requests and limits                                                                                                                                       | {}            |
 | `mysql.nodeSelector`                                                                            | Node labels for pod assignment                                                                                                                                           | {}            |
-| `mysql.affinity`                                                                                | Defines affinities and anti-affinities for pods as defined in: https://kubernetes.io/docs/concepts/configuration/assign-pod-node/#affinity-and-anti-affinity preferences | {}            |
+| `mysql.affinity`                                                                                | Defines affinities and anti-affinities for pods as defined in: <https://kubernetes.io/docs/concepts/configuration/assign-pod-node/#affinity-and-anti-affinity> preferences | {}            |
 
 ### Related repositorys
 
@@ -109,8 +109,8 @@ Installing helm chart
 
 ```shell
 helm install wutong wutong/wutong-operator \
---version 1.8.0 \
+--version 1.9.0 \
 --set operator.image.name=swr.cn-southwest-2.myhuaweicloud.com/wutong/wutong-operator \
---set operator.image.tag=v1.8.0 \
+--set operator.image.tag=v1.9.0 \
 --namespace wt-system
 ```
