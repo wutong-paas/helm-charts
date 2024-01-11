@@ -14,7 +14,7 @@ data:
             "code_repo": "",
             "build_version": "1.9.0",
             "build_source": "image",
-            "image": "swr.cn-southwest-2.myhuaweicloud.com/wutong/wt-mesh-data-panel:v1.9.0",
+            "image": "swr.cn-southwest-2.myhuaweicloud.com/wutong/wt-mesh-data-panel:v1.10.0",
             "config_group": [
             {
                 "service_meta_type": "downstream_port",
@@ -203,7 +203,7 @@ data:
             "code_repo": "",
             "build_version": "1.9.0",
             "build_source": "image",
-            "image": "swr.cn-southwest-2.myhuaweicloud.com/wutong/wt-mesh-data-panel:v1.9.0",
+            "image": "swr.cn-southwest-2.myhuaweicloud.com/wutong/wt-mesh-data-panel:v1.10.0",
             "config_group": [
             {
                 "service_meta_type": "upstream_port",
