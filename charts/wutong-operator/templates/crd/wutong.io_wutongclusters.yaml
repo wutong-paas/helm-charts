@@ -37,6 +37,12 @@ spec:
             spec:
               description: WutongClusterSpec defines the desired state of WutongCluster
               properties:
+                regionID:
+                  description: RegionID is the id of the cluster
+                  type: string
+                regionCode:
+                  description: RegionCode is the code of the region
+                  type: string
                 arch:
                   description:
                     Arch is the server architecture of the cluster. It's
