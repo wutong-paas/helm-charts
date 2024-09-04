@@ -94,7 +94,7 @@ adaptor:
   image:
     repository: "swr.cn-southwest-2.myhuaweicloud.com/wutong/wutong-adaptor"
     pullPolicy: IfNotPresent
-    tag: "v1.14.0"
+    tag: "v1.15.0"
 
   podAnnotations: {}
 
@@ -132,7 +132,7 @@ console:
   image:
     repository: "swr.cn-southwest-2.myhuaweicloud.com/wutong/wutong-console"
     pullPolicy: IfNotPresent
-    tag: "v1.14.0"
+    tag: "v1.15.0"
 
   podAnnotations: {}
 
@@ -171,7 +171,7 @@ ui:
     repository: "swr.cn-southwest-2.myhuaweicloud.com/wutong/wutong-ui"
     pullPolicy: IfNotPresent
 
-    tag: "v1.14.0"
+    tag: "v1.15.0"
 
   domain: console.wutongpaas.com
 
